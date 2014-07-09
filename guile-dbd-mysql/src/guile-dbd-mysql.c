@@ -327,6 +327,7 @@ __mysql_getrow_g_db_handle(gdbi_db_handle_t* dbh)
 	case FIELD_TYPE_LONG:
 	case FIELD_TYPE_LONGLONG:
 	case FIELD_TYPE_DECIMAL:
+	case FIELD_TYPE_NEWDECIMAL:
 	  value_str = strndup(row[f],les[f]);
 	  value = scm_from_long(atoi(value_str));
 	  break;
